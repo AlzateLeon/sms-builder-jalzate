@@ -36,11 +36,10 @@ public class ImportarReferenciasBean extends GenericBean<Referencia> {
     @Getter
     @Setter
     private UploadedFile file;
+
     @Getter
     @Setter
     private Fuente fuente;
-
-
 
     @Setter
     private TipoFuente tipoFuente;
