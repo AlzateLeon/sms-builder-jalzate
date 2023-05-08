@@ -42,7 +42,9 @@ public class RegistroReferenciasBean extends GenericBean<Referencia> {
 
     private TipoFuente tipoFuente;
 
-    private boolean seleccionMendeley;
+    @Getter
+    @Setter
+    private boolean checkMendeley;
 
     public void upload() {
         if (file != null) {
@@ -53,7 +55,7 @@ public class RegistroReferenciasBean extends GenericBean<Referencia> {
     private void procesarArchivo() {
 
         try {
-            if (seleccionMendeley){
+            if (checkMendeley){
                 log.info("se selecciono mendeley");
                 MendeleyRisFileMultipleRegisterParse parser = new MendeleyRisFileMultipleRegisterParse(fuente);
                 List<Referencia> referencias = parser.parse(file.getInputStream());

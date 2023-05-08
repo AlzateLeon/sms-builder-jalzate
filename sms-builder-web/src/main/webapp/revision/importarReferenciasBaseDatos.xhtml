@@ -19,7 +19,8 @@
 				<p:outputLabel value="#{msg.etiquetaArchivo}:" />
 				<p:fileUpload value="#{importarReferenciaBD.file}" mode="simple"
 					skinSimple="true" />
-
+				<p:outputLabel for="checkMendeley" value="#{msg.importarMendeley}:" />
+				<h:selectBooleanCheckbox id="checkMendeley" type="checkbox" value="#{registroReferenciasBean.checkMendeley}" />
 
 				<f:facet name="footer">
 					<p:commandButton value="#{msg.botonAceptar}"
